@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:background="@color/black1">
+
+   <RelativeLayout
+       android:id="@+id/header"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="300dp"
+           android:background="@drawable/calorie"
+           android:orientation="vertical">
+
+
+           <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:id="@+id/profile_intent"
+               android:src="@drawable/ic_baseline_emoji_emotions_24"
+               android:layout_gravity="center"
+               android:layout_marginTop="25dp"
+               app:c_border="true"
+               app:c_border_color="@color/black1" />
+
+       </LinearLayout>
+
+           <LinearLayout
+               android:layout_marginTop="180dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:weightSum="3"
+               android:elevation="5dp">
+
+               <LinearLayout
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="match_parent">
+
+                   <ImageView
+                       android:layout_width="35dp"
+                       android:layout_height="35dp"
+                       android:src="@drawable/ic_baseline_dining_24"
+                       android:layout_gravity="center"
+                       android:layout_marginTop="20dp"/>
+
+                   <TextView
+                       android:id="@+id/calories_consumedtv"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="98"
+                       android:textColor="@color/white"
+                       android:textStyle="bold"
+                       android:textSize="28dp"
+                       android:layout_gravity="center"/>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="match_parent">
+
+                   <ImageView
+                       android:layout_width="35dp"
+                       android:layout_height="35dp"
+                       android:src="@drawable/ic_baseline_local_fire_department_24"
+                       android:layout_gravity="center"
+                       android:layout_marginTop="20dp"/>
+
+                   <TextView
+                       android:id="@+id/calories_burnedtv"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="172"
+                       android:textColor="@color/white"
+                       android:textStyle="bold"
+                       android:textSize="28dp"
+                       android:layout_gravity="center"/>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_gravity="center"
+                   android:orientation="vertical"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="match_parent">
+
+                   <ImageView
+                       android:layout_width="35dp"
+                       android:layout_height="35dp"
+                       android:src="@drawable/ic_baseline_local_drink_24"
+                       android:layout_gravity="center"
+                       android:layout_marginTop="20dp"/>
+
+                   <TextView
+                       android:id="@+id/water_intaketv"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:text="5"
+                       android:textColor="@color/white"
+                       android:textSize="28dp"
+                       android:textStyle="bold" />
+
+               </LinearLayout>
+           </LinearLayout>
+   </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/track_calories_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardBackgroundColor="@color/black1"
+                    android:elevation="10dp"
+                    android:layout_margin="15dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/dummyimg"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_fastfood_24"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/dummyimg"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Track Calories"
+                                android:layout_marginTop="10dp"
+                                android:textSize="28dp"
+                                android:textColor="@color/green"
+                                android:layout_marginLeft="20dp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Track the calories consumed by you"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:textStyle="italic"/>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/track_water_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardBackgroundColor="@color/black1"
+                    android:elevation="10dp"
+                    android:layout_margin="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/dummyimg1"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_local_drink_24"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/dummyimg1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Track Water"
+                                android:layout_marginTop="10dp"
+                                android:textSize="28dp"
+                                android:textColor="@color/waterblue"
+                                android:layout_marginLeft="20dp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Track the water consumed by you"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:textStyle="italic"/>
+
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/step_counter_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardBackgroundColor="@color/black1"
+                    android:elevation="10dp"
+                    android:layout_margin="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/dummyimg2"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_local_fire_department_24"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/dummyimg2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Step Counter"
+                                android:layout_marginTop="10dp"
+                                android:textSize="28dp"
+                                android:textColor="@color/candy"
+                                android:layout_marginLeft="20dp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Check how many calories you have burned"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:textStyle="italic"/>
+
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bmi_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardBackgroundColor="@color/black1"
+                    android:elevation="10dp"
+                    android:layout_margin="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/dummyimg3"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_calculate_24"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/dummyimg3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="BMI Calculator"
+                                android:layout_marginTop="10dp"
+                                android:textSize="28dp"
+                                android:textColor="@color/creame"
+                                android:layout_marginLeft="20dp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Check your body details"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:textStyle="italic"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
